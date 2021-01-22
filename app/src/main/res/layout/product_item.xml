@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="160dp"
+    android:layout_height="300dp"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="1dp"
+    android:layout_margin="5dp"
+    android:foreground="?android:selectableItemBackground"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:id="@+id/product_image"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:textAllCaps="false"
+            android:id="@+id/product_title"
+            android:lineHeight="20dp"
+            android:text="@string/product"
+            android:textColor="@color/gray3"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:textStyle="normal"
+                android:textSize="12sp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:text="@string/sales"
+                android:gravity="start"
+                android:id="@+id/salesprice_label" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/salesprice_label"
+                android:id="@+id/product_price"
+                android:text="$120.00" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:textStyle="normal"
+                android:layout_centerVertical="true"
+                android:textSize="12sp"
+                android:gravity="start"
+                android:layout_marginEnd="5dp"
+                android:text="@string/cost"
+                android:id="@+id/costprice_label" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/costprice_label"
+                android:textSize="12sp"
+                android:id="@+id/product_cost_price"
+                android:text="$120.00" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:textStyle="normal"
+                android:layout_centerVertical="true"
+                android:textSize="12sp"
+                android:gravity="start"
+                android:layout_marginEnd="5dp"
+                android:text="@string/shelf"
+                android:id="@+id/shelfnumber_label" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/shelfnumber_label"
+                android:textSize="12sp"
+                android:id="@+id/product_shelf_number"
+                android:text="XX" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:gravity="start"
+            android:textSize="10sp"
+            android:id="@+id/product_comment"
+            android:text="@string/product_quantity_description" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

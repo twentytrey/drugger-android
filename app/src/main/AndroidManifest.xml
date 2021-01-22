@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="xyz.drugger.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <uses-feature android:name="android.hardware.camera2" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ReturnAnItem" android:label="Return Item"
+            android:theme="@style/LightToolbar"
+            android:parentActivityName=".ReturnsActivity" />
+        <activity
+            android:name=".ReturnsActivity"
+            android:label="Product Returns" />
+        <activity android:name=".SelectStore" />
+        <activity
+            android:name=".EditProduct"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".EditProfile"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".AddCategory"
+            android:label="Add Category"
+            android:parentActivityName=".ProductsActivity"
+            android:theme="@style/LightToolbar" />
+        <activity
+            android:name=".AddCatalog"
+            android:label="Add Catalog"
+            android:parentActivityName=".ProductsActivity"
+            android:theme="@style/FancyToolbar" />
+        <activity
+            android:name=".ProductsActivity"
+            android:label="Products"
+            android:parentActivityName=".DashboardActivity" />
+        <activity
+            android:name=".AddProductActivity"
+            android:label="Add Product"
+            android:parentActivityName=".ProductsActivity"
+            android:theme="@style/LightToolbar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".BillingActivity" />
+        <activity
+            android:name=".CheckOutActivity"
+            android:label="Checkout Customer"
+            android:parentActivityName=".PointOfSale"
+            android:theme="@style/FancyToolbar" />
+        <activity
+            android:name=".PointOfSale"
+            android:label="Point Of Sale" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".DashboardActivity" />
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <service android:name=".services.AddToCustomerCart" />
+        <service
+            android:name=".services.LocalCartService"
+            android:label="Cart Service" />
+    </application>
+
+</manifest>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="1dp"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="1dp"
+    android:foreground="?android:selectableItemBackground"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/item_img_container"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="75dp"
+                android:id="@+id/item_image_pos"
+                android:scaleType="fitCenter" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pos_item_description_container"
+            android:layout_width="0dp"
+            android:layout_weight="9"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_toEndOf="@id/item_img_container"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_name_pos"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:lineHeight="23dp"
+                android:text="McDonald's"
+                android:textColor="@color/gray3"
+                android:layout_marginStart="10dp"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/item_price_pos"
+                android:text="$120.00" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/shelf_number_pos"
+                android:text="Shelf XX" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:layout_marginStart="10dp"
+                android:textSize="10sp"
+                android:id="@+id/item_comment_pos"
+                android:text="3 in stock at warehouse" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="10dp"
+                android:textSize="10sp"
+                android:text="Tap this item to sell to customer." />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>
